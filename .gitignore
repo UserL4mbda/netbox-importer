@@ -1,0 +1,29 @@
+# Binaries (les exécutables compilés)
+/netbox-importer
+/netbox-importer.exe
+*.exe
+*.dll
+
+# Dossiers de build Go (à ignorer)
+/bin/
+/dist/
+
+# Fichiers temporaires
+*.tmp
+*.test
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Modules Go (dépendances)
+/vendor/
+
+# Fichiers de configuration locaux
+.env
+.local.env
+
+# Logs
+*.log
