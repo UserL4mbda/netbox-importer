@@ -62,6 +62,40 @@ type SiteConfig struct {
 	Description string `yaml:"description"`
 }
 
+// LocationTypeConfig correspond aux types de lieux (ex: "Salle serveur", "Bureau")
+type LocationTypeConfig struct {
+	Name string `yaml:"name"`
+	Slug string `yaml:"slug"`
+}
+
+// LocationConfig correspond à chaque élément de la liste "locations"
+type LocationConfig struct {
+	Name        string `yaml:"name"`
+	Slug        string `yaml:"slug"`
+	Display     string `yaml:"display"`
+	Site        string `yaml:"site"` // Fait référence au nom du site
+	Status      string `yaml:"status"`
+	Description string `yaml:"description"`
+}
+
+// DeviceTypeConfig correspond à chaque élément de la liste "device_types"
+type DeviceTypeConfig struct {
+	Model        string `yaml:"model"`
+	Slug         string `yaml:"slug"`
+	Manufacturer string `yaml:"manufacturer"` // Fait référence au nom du fabricant
+}
+
+// DeviceConfig correspond à chaque élément de la liste "devices"
+type DeviceConfig struct {
+	Name        string `yaml:"name"`
+	Display     string `yaml:"display"`
+	DeviceType  string `yaml:"device_type"` // Fait référence au modèle du type d'appareil
+	Site        string `yaml:"site"`
+	Location    string `yaml:"location"` // Fait référence au nom du lieu
+	Status      string `yaml:"status"`
+	Description string `yaml:"description"`
+}
+
 type CableConfig struct {
 	FromDevice  string `yaml:"from_device"`
 	FromPort    string `yaml:"from_port"`
